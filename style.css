@@ -1,0 +1,491 @@
+/* Estilo Geral */
+html, body {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-inscreva-se button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: deepskyblue;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+h2.título {
+    color: black;
+    font-size: 45px;
+    text-align: center;
+}
+
+button:hover, form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px black;
+    transform: scale(1.05);
+}
+
+/* Estilo Cabeçalho */
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    transition: .1s;
+}
+
+header nav.menu-desktop a:hover {
+    color: deepskyblue;
+    transform: scale(1.10);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* Estilo Mobile */
+.menu-mobile {
+    background-color: #333; /* Cor mais escura para o fundo do menu */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: white; /* Ícone de fechar em branco */
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white; /* Cor dos links no menu móvel */
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: deepskyblue; /* Cor de destaque para os itens do menu ao passar o mouse */
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.6); /* Aumentei a opacidade para garantir que o fundo seja mais visível */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+/* Estilo do Topo do Site */
+section .topo-do-site {
+    padding: 40px 4%;
+    
+}
+
+section .topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: black;
+    font-size: 52px;
+    line-height: 70px;
+    text-align: justify;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: black;
+    margin: 40px 0;
+    font-family: cursive;
+    font-size: 35px;
+}
+
+.topo-do-site .img-topo-site img {
+    width: 100%; /* Removi o efeito de flutuar e agora a imagem ocupa 100% do tamanho */
+    margin-bottom: 40px;
+}
+
+/* Estilo Galeria de Imagens */
+.img-topo-site {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px; /* Espaçamento entre as imagens */
+    justify-content: center;
+    flex-wrap: wrap; /* Para permitir que as imagens se ajustem em telas menores */
+}
+
+.gallery-item {
+    width: 18%; /* Controla o tamanho das imagens */
+    object-fit: cover; /* Garante que a imagem ocupe todo o espaço da célula */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); /* Aumenta a imagem quando o mouse passa por cima */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+
+/* Estilo Modalidades */
+section .modalidades {
+    padding: 40px 4%;
+    margin: 40px;
+    margin-bottom: 80px; /* Adiciona mais espaço abaixo da seção Modalidades */
+}
+
+/* Centraliza o título da seção Modalidades */
+section .modalidades h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 36px; /* Ajuste o tamanho do título, conforme necessário */
+    color: black; /* Ajuste a cor do título conforme desejado */
+}
+
+section .modalidades .flex {
+    gap: 60px;
+}
+
+.modalidades .titulo {
+    text-align: center;
+    font-size: 32px; /* Ajuste o tamanho conforme necessário */
+    font-weight: bold;
+    margin-bottom: 40px; /* Espaçamento abaixo do título */
+}
+
+.modalidades .modalidades-box {
+    color: deepskyblue;
+    padding: 40px;
+    border-radius: 20px;
+    transition: .1s;
+    text-align: center;
+}
+
+.modalidades .modalidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(48, 194, 243, 0.342);
+}
+
+.modalidades .modalidades-box img {
+    font-size: 70px;
+    color: deepskyblue;
+}
+
+.modalidades .modalidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Adicionando margem no botão de inscrição para espaçamento */
+.btn-inscreva-se {
+    margin-bottom: 60px; /* Adiciona espaço entre o botão e a próxima seção */
+}
+
+/* Estilo Sobre */
+section.Sobre {
+    padding: 40px 4%;
+}
+
+section.Sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.Sobre .txt-sobre {
+    color: black;
+}
+
+.Sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.Sobre .txt-sobre h2 span {
+    color: deepskyblue;
+    display: block;
+}
+
+.Sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: deepskyblue;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* Estilo Formulário */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: deepskyblue;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    color: black;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 80px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: deepskyblue;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.formulario .titulo {
+    text-align: center;
+    font-size: 32px; /* Ajuste o tamanho conforme necessário */
+    font-weight: bold;
+    margin-bottom: 40px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo Rodapé */
+footer {
+    padding: 20px 4%;
+    box-shadow: 0 0 40px 10px deepskyblue;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid deepskyblue;
+}
+
+footer .line-footer p i {
+    color: deepskyblue;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: black;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+/* Estilo Responsivo */
+@media screen and (max-width: 1020px) {
+
+    /* Classes Gerais */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 30px;
+    }
+
+    /* Cabeçalho */
+    .menu-desktop, .btn-inscreva-se {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    /* Topo do Site */
+    section .topo-do-site .flex {
+        gap: 40px;
+    }
+
+    section .topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    .topo-do-site p {
+        text-align: center;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /* Estilo Modalidades */
+    section .modalidades {
+        padding: 40px 8%;
+        margin: 40px;
+    }
+
+    /* Sobre */
+    section.Sobre {
+        padding: 80px 8%;
+    }
+
+    .Sobre .txt-sobre h2 {
+        font-size: 35px;
+        line-height: 32px;
+        text-align: center;
+    }
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%;
+    }
+
+    /* Rodapé */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima */
+    height: auto;
+    max-height: 350px; /* Limita a altura máxima */
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .carrossel-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-height: 350px; /* Controla a altura individual */
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 20px;
+  }
+  
+  .carrossel-img.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  .carrossel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc; /* Cor neutra visível */
+    border: 1px solid #555; /* Borda para destaque */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+  }
